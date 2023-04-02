@@ -1,6 +1,6 @@
 # Chronos
 
-Welcome to my new cryptonect project and to the internet computer development community.
+Welcome to my new Chronos project and to the internet computer development community.
 
 To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
 
@@ -15,7 +15,7 @@ To learn more before you start working with cryptonect, see the following docume
 If you want to start working on your project right away, you might want to try the following commands:
 
 ```bash
-cd cryptonect/
+cd Chronos/
 dfx help
 dfx canister --help
 ```
