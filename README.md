@@ -1,2 +1,2 @@
-# Cryptonect
-Securely connected: Cryptonect, the currency for a seamlessly integrated digital world.
+# Chronos
+Empowering Timeless Transactions with Cryptocurrency Innovation
