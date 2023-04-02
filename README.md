@@ -77,8 +77,10 @@ echo $OWNER_PUBLIC_KEY
 5. Check the owner's balance:
 
 ```
-dfx canister call token balanceOf "( $OWNER_PUBLIC_KEY )"
+dfx canister call cryptonect_backend balanceOf "( $OWNER_PUBLIC_KEY )"
 ```
+
+Note my canister name is "cryptonect_backend" replace it with your canister name (Folder in which main.motoko file is present is your canister name)
 
 # Charge the Canister
 

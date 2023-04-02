@@ -1,1 +1,4 @@
 This is a sample asset!
+
+dfx identity get-principal                                                   ─╯
+54llv-6zbxb-h4jls-dmnli-4b4wp-ngz6d-7u3wm-yj3ey-wl465-yrj5s-nqe
