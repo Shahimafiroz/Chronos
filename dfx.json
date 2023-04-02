@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "cryptonect_backend": {
+      "main": "src/cryptonect_backend/main.mo",
+      "type": "motoko"
+    },
+    "cryptonect_frontend": {
+      "dependencies": [
+        "cryptonect_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/cryptonect_frontend/src/index.html"
+      },
+      "source": [
+        "src/cryptonect_frontend/assets",
+        "dist/cryptonect_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

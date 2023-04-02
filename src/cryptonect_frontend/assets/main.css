@@ -1,0 +1,192 @@
+html {
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/graphy-dark.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 10pt;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+span:after {
+  content: " ";
+  display: inline-block;
+  width: 2%;
+}
+
+fieldset {
+  float: left;
+  padding-right: 18px;
+}
+
+#logo.img {
+  font-family: "Times";
+  font-size: 20pt;
+}
+
+.window {
+  position: relative;
+  cursor: default;
+  margin: 2em auto;
+  width: 80%;
+  background: #4c454c;
+  color: white;
+  border: 6px white;
+  border-radius: 10px;
+  padding: 1em;
+  box-shadow: 0 0 0 3px #595b5b, 1em 1em 3px 0 rgba(11, 0, 0, 0.5);
+  max-width: 640px;
+}
+
+.window.white {
+  background: #353035;
+  color: rgb(250, 248, 248);
+  border-color: #4c454c;
+  box-shadow: 0 0 0 3px rgb(237, 234, 234), 1em 1em 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.window.half-width {
+  width: 50%;
+}
+
+.window img {
+  width: 44rem;
+  height: 18rem;
+  display: flex;
+  align-items: center;
+}
+.window h1 {
+  text-align: center;
+}
+
+.window.blue p {
+  color: white;
+  text-shadow: 0 0 2px white;
+}
+
+button {
+  margin: 0;
+  padding: 2px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+button,
+.button,
+.button:link {
+  display: inline-block;
+  font-weight: bolder;
+  color: white;
+  font-family: inherit;
+  font-size: inherit;
+  background: #f77fbe;
+  padding: 0 1em;
+  box-shadow: 0.5em 0.5em 3px rgba(0, 0, 0, 0.5);
+  position: relative;
+  transition: 0.2s all ease-in;
+  border: 1px outset #f77fbe;
+}
+
+button.full-width,
+.button.full-width {
+  display: block;
+  text-align: center;
+}
+
+button:before,
+.button:before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  /*background: rgba(255,255,0,.5); /* DEBUG CLICK AREA */
+}
+
+button:hover,
+.button:active,
+.button:focus,
+.button:hover {
+  transform: translate3d(0.25em, 0.25em, 10em);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+  background: rgb(224, 37, 130);
+}
+
+button:hover:before,
+.button:hover:before,
+button:focus:before,
+.button:focus:before {
+  top: -1em;
+  left: -1em;
+}
+
+.button.pressed {
+  box-shadow: none;
+  left: 0.25em;
+  top: 0.25em;
+  margin-right: 0.25em;
+  background: gray;
+  border: 1px outset #707070;
+}
+
+button:disabled {
+  transform: translate3d(0.25em, 0.25em, 10em);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+  background: gray;
+  border: 1px outset #707070;
+}
+
+button:first-letter,
+.button:first-letter {
+  color: yellow;
+}
+
+button#btn-transfer {
+  margin-top: 20px;
+}
+
+input,
+textarea {
+  background: rgb(253, 253, 254);
+  color: rgb(9, 9, 9);
+  width: 100%;
+  max-width: 100%;
+  font-size: 12pt;
+}
+input:disabled {
+  background: #505070;
+  color: #d0d0d0;
+  border: 2px solid #505070;
+}
+
+.window > textarea {
+  width: 100%;
+  border: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.trade-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+div .transfer {
+  display: table;
+  margin: auto;
+}
