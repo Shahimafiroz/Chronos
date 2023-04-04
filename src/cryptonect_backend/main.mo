@@ -13,7 +13,7 @@ actor Token {
   var  balances = HashMap.HashMap<Principal, Nat>( 1 , Principal.equal ,Principal.hash);
 
   balances.put(owner , totalSupply);
-
+//function for balance
   public query func balanceOf (who:Principal): async Nat{
        
        let blnce : Nat = switch (balances.get(who)){

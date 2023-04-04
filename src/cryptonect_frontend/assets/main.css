@@ -35,7 +35,8 @@ fieldset {
   width: 80%;
   background: #4c454c;
   color: white;
-  border: 6px white;
+  /* border: 6px; */
+  border-color: #ffffff;
   border-radius: 10px;
   padding: 1em;
   box-shadow: 0 0 0 3px #595b5b, 1em 1em 3px 0 rgba(11, 0, 0, 0.5);
@@ -45,7 +46,7 @@ fieldset {
 .window.white {
   background: #353035;
   color: rgb(250, 248, 248);
-  border-color: #4c454c;
+  border-color: #ffffff;
   box-shadow: 0 0 0 3px rgb(237, 234, 234), 1em 1em 3px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -58,6 +59,7 @@ fieldset {
   height: 18rem;
   display: flex;
   align-items: center;
+  padding-left: 1rem;
 }
 .window h1 {
   text-align: center;

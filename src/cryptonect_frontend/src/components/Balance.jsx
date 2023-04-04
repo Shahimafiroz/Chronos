@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Balance() {
-  
   async function handleClick() {
     console.log("Balance Button Clicked");
+    //await
+    const [inputValue, setInput] = useState("");
   }
-
 
   return (
     <div className="window white">
@@ -15,13 +15,11 @@ function Balance() {
           id="balance-principal-id"
           type="text"
           placeholder="Enter a Principal ID"
+          // value={inputValue}
         />
       </p>
       <p className="trade-buttons">
-        <button
-          id="btn-request-balance"
-          onClick={handleClick}
-        >
+        <button id="btn-request-balance" onClick={handleClick}>
           Check Balance
         </button>
       </p>
