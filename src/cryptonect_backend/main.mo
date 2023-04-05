@@ -56,9 +56,9 @@ actor Cryptonect_backend {
            let toBalance =  await balanceOf(to);
            let newToBalance = toBalance + transferAmount;   
            balances.put( to , newToBalance);
-           return("sucess"); 
+           return("Transaction Sucessfull!!"); 
        }else{
-        return("Insuffecinet funds");
+        return("Im Sorry!! You dont have tokens to transfer BRO !!!! ");
        }// else ends 
     }// transfer ends
 
