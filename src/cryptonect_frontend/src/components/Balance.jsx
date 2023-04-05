@@ -1,10 +1,23 @@
 import React, { useState } from "react";
+import { Principal } from "@dfinity/principal";
+import { cryptonect_backend } from "../../../declarations/cryptonect_backend";
 
 function Balance() {
+  // creating constants that have state
+  const [inputValue, setInput] = useState("");
+  const [balanceResult, setBalance] = useState("");
+  const [cryptoSymbol, setSymbol] = useState("");
+  const [isHidden, setHidden] = useState(true);
+
+  // function responsible for sending the input text as Principal
   async function handleClick() {
-    console.log("Balance Button Clicked");
-    //await
-    const [inputValue, setInput] = useState("");
+    // console.log(inputValue);
+    const principal = Principal.fromText(inputValue);
+    const balance = await cryptonect_backend.balanceOf(principal);
+    setBalance(balance.toLocaleString());
+    setSymbol(await cryptonect_backend.getSymbol());
+    setHidden(false);
+    // setBalance(balance);
   }
 
   return (
@@ -15,7 +28,8 @@ function Balance() {
           id="balance-principal-id"
           type="text"
           placeholder="Enter a Principal ID"
-          // value={inputValue}
+          value={inputValue}
+          onChange={(e) => setInput(e.target.value)}
         />
       </p>
       <p className="trade-buttons">
@@ -23,7 +37,9 @@ function Balance() {
           Check Balance
         </button>
       </p>
-      <p>This account has a balance of XYZ.</p>
+      <p hidden={isHidden}>
+        This account has a balance of {balanceResult} {cryptoSymbol}.
+      </p>
     </div>
   );
 }

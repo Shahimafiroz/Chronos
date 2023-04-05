@@ -2,3 +2,16 @@ This is a sample asset!
 
 dfx identity get-principal                                                   ─╯
 54llv-6zbxb-h4jls-dmnli-4b4wp-ngz6d-7u3wm-yj3ey-wl465-yrj5s-nqe
+
+More clarity on --- > transfer functionality 
+
+who is the user(2vxsx-fae) when we call out the payOut methood?
+
+
+The transcript is discussing the concept of message caller in the context of a smart contract. The speaker is experimenting with calling a payout function from a transfer function in their smart contract code and trying to determine who the message caller is in each scenario.
+
+The message caller refers to the entity that initiates the execution of a function within a smart contract. The speaker explains that when they call the payout function directly from the command line, the message caller is their user principal ID. Similarly, when they trigger the payout function by clicking a button on a frontend website, the caller is the user that is using the website.
+
+However, when the transfer function calls the payout function, the message caller is not the user, but rather the entire canister that contains the smart contract code. This is because the transfer function is being called by the canister itself, not by an external user.
+
+Understanding who the message caller is important in making the transfer function work correctly, and the speaker is restoring some code to the faucet function and working on the transfer function based on this understanding.

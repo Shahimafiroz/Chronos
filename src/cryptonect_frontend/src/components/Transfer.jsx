@@ -1,10 +1,8 @@
 import React from "react";
+import { cryptonect_backend } from "../../../declarations/cryptonect_backend/index";
 
 function Transfer() {
-  
-  async function handleClick() {
-    
-  }
+  async function handleClick() {}
 
   return (
     <div className="window white">
@@ -13,10 +11,7 @@ function Transfer() {
           <legend>To Account:</legend>
           <ul>
             <li>
-              <input
-                type="text"
-                id="transfer-to-id"
-              />
+              <input type="text" id="transfer-to-id" />
             </li>
           </ul>
         </fieldset>
@@ -24,15 +19,12 @@ function Transfer() {
           <legend>Amount:</legend>
           <ul>
             <li>
-              <input
-                type="number"
-                id="amount"
-              />
+              <input type="number" id="amount" />
             </li>
           </ul>
         </fieldset>
         <p className="trade-buttons">
-          <button id="btn-transfer" onClick={handleClick} >
+          <button id="btn-transfer" onClick={handleClick}>
             Transfer
           </button>
         </p>
