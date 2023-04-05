@@ -33,10 +33,12 @@ actor Cryptonect_backend {
    public shared(msg) func payOut() : async Text {
 
       if (balances.get(msg.caller) == null){ // if this condition is true it means the user dosent exist in our ledger
-        let amount = 10000;
-        Debug.print(debug_show(msg.caller));
-        balances.put(msg.caller , amount);
-        return "Sucess";
+        
+        // Debug.print(debug_show(msg.caller));
+      
+        let amount = 10000;    
+        let result = await transfer(msg.caller , amount);
+        return result;
       }else{//else he exist 
         return "Dont be greedy! you have already claimed your share of CHRONOS!"
       }

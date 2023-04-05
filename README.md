@@ -87,13 +87,13 @@ Note my canister name is "cryptonect_backend" replace it with your canister name
 1. Check canister ID:
 
 ```
-dfx canister id token
+dfx canister id cryptonect_backend
 ```
 
 2. Save canister ID into a command line variable:
 
 ```
-CANISTER_PUBLIC_KEY="principal \"$( \dfx canister id token )\""
+ CANISTER_PUBLIC_KEY="principal \"$( \dfx canister id cryptonect_backend )\""
 ```
 
 3. Check canister ID has been successfully saved:
@@ -105,7 +105,7 @@ echo $CANISTER_PUBLIC_KEY
 4. Transfer half a billion tokens to the canister Principal ID:
 
 ```
-dfx canister call token transfer "($CANISTER_PUBLIC_KEY, 500_000_000)"
+dfx canister call cryptonect_backend transfer "($CANISTER_PUBLIC_KEY, 500_000_000)"
 ```
 
 # Deploy the Project to the Live IC Network
